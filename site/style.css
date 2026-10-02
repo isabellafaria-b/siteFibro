@@ -1,0 +1,84 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family:'Gill Sans', 'Gill Sans MT', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(29, 41, 35);
+}
+
+.app {
+    background: #ececd1;
+    width: 90%;
+    max-width: 550px;
+    margin: 100px auto 0;
+    padding: 25px;
+    border-radius: 7px;
+}
+
+.app h1{
+    font-weight: 25px;
+    color: rgb(50, 66, 59);
+    font-weight: 600;
+    border-bottom: 1px solid #cbcbb3;
+    padding-bottom: 10px;
+}
+
+.quiz {
+    padding: 10px 0;
+}
+
+.quiz h2 {
+    font-size: 20px;
+    color: rgb(63, 111, 93);
+    font-weight: 600;
+}
+
+.btn {
+    background: #ececd1;
+    color: rgb(12, 92, 57);
+    font-weight: 500;
+    font-family: sans-serif;
+    width: 100%;
+    border: 1px solid rgb(50, 66, 59);
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover:not([disabled]) {
+    background: rgb(59, 89, 64);
+    color: #ececd1;
+}
+
+.btn:disabled {
+    cursor: no-drop;
+}
+
+#nextBtn {
+    background: rgb(29, 41, 35);
+    color: #cbcbb3;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+
+.btn:hover {
+    border-color: rgb(32, 58, 36);
+}
+
+.btn.selected {
+    background: rgb(32, 58, 36);
+    color: #ececd1;
+    border-color: rgb(32, 58, 36);
+}
