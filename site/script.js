@@ -44,6 +44,15 @@ const questions = [
             { id: 4, text: "Resposta 4" },
         ]
     },
+    {
+        question: "Pergunta6",
+        answers: [
+            { id: 1, text: "Resposta 1" },
+            { id: 2, text: "Resposta 2" },
+            { id: 3, text: "Resposta 3" },
+            { id: 4, text: "Resposta 4" },
+        ]
+    },
 ]
 
 const questionElement = document.getElementById("question");
@@ -52,11 +61,25 @@ const nextButton = document.getElementById("nextBtn");
 
 let currentQuestionIndex = 0;
 
+function atualizarBarraProgresso(){
+    const barra = document.getElementById(`prgsBar`);
+
+    if(barra){
+        const porcentagem = ((currentQuestionIndex + 1) / questions.length) * 100;
+        barra.style.width = `${porcentagem}%`;
+    }
+}
+
 function startQuiz(){
     currentQuestionIndex = 0;
     nextButton.innerHTML = "Próxima";
+
+    const containerBarra = document.querySelector('.prgsContainer');
+    if (containerBarra) containerBarra.style.display = 'block';
+
     showQuestion();
 }
+
 function resetState(){
     nextButton.style.display = "none";
     while(answerButtons.firstChild){
@@ -69,6 +92,8 @@ function showQuestion(){
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
     questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+
+    atualizarBarraProgresso();
 
     currentQuestion.answers.forEach((answer) => {
         const button = document.createElement("button");
@@ -94,7 +119,10 @@ function selectAnswer(event){
 
 function end(){
     resetState();
-    questionElement.innerHTML = 'Obrigada por fazer o quiz!';
+    questionElement.innerHTML = 'Obrigado pelo seu tempo e por apoiar a turma do 1º ano B!';
+
+    const containerBarra = document.querySelector('.prgsContainer');
+    if (containerBarra) containerBarra.style.display = 'none';
 }
 
 function handleNextButton(){

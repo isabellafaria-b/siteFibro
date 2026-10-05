@@ -12,7 +12,7 @@ body {
 .app {
     background: #ececd1;
     width: 90%;
-    max-width: 550px;
+    max-width: 600px;
     margin: 100px auto 0;
     padding: 25px;
     border-radius: 7px;
@@ -27,7 +27,7 @@ body {
 }
 
 .quiz {
-    padding: 10px 0;
+    padding: 15px 0;
 }
 
 .quiz h2 {
@@ -38,15 +38,15 @@ body {
 
 .btn {
     background: #ececd1;
-    color: rgb(12, 92, 57);
+    color: rgb(133, 109, 81);
     font-weight: 500;
-    font-family: sans-serif;
+    font-family: Helvetica, sans-serif;
     width: 100%;
     border: 1px solid rgb(50, 66, 59);
-    padding: 10px;
+    padding: 12px;
     margin: 10px 0;
     text-align: left;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s;
 }
@@ -71,6 +71,22 @@ body {
     border-radius: 4px;
     cursor: pointer;
     display: none;
+}
+
+.prgsContainer {
+    width: 100%;
+    height: 5px;
+    background-color: rgb(209, 214, 189);
+    border-radius: 4px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+#prgsBar {
+    width: 0%;
+    height: 100%;
+    background-color: rgb(196, 170, 122);
+    transition: width 0.4s ease;
 }
 
 .btn:hover {
